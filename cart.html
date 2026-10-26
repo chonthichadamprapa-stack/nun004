@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ตะกร้าสินค้า | ครัวไทยบ้านเรา</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="top"><a class="brand" href="index.html"><span class="logo">🍲</span><span><b>ครัวไทยบ้านเรา</b><small>อาหารไทย รสชาติบ้าน ๆ</small></span></a><nav><a href="index.html">หน้าแรก</a><a href="menu.html">เมนูอาหาร</a><a href="product.html">รายละเอียดเมนู</a><a class="active" href="cart.html">ตะกร้าสินค้า</a><a href="about.html">เกี่ยวกับเรา</a></nav><a class="cart" href="cart.html">♡ 🛒</a></header>
+<section class="page-title"><span>♡　พร้อมอิ่มอร่อย　♡</span><h1>ตะกร้าสินค้า</h1><p>ตรวจสอบรายการอาหารก่อนสั่งซื้อ</p></section><section class="cartbox"><div class="cartrow headrow"><span>สินค้า</span><span>ราคา</span><span>จำนวน</span><span>รวม</span></div><div class="cartrow"><span class="cartfood">🍜　ผัดไทยกุ้งสด</span><span>60 บาท</span><span><input id="cartQty" type="number" min="1" value="1" onchange="updateTotal()"></span><b id="total">60 บาท</b></div><div class="totalrow">ยอดรวมทั้งหมด <strong id="grand">60 บาท</strong></div><div class="cartactions"><a class="btn outline" href="menu.html">เลือกซื้อเพิ่มเติม</a><button class="btn" onclick="alert('ตัวอย่างหน้าร้านค้า: เชื่อมต่อระบบชำระเงินจริงเพิ่มเติมได้')">▣　ชำระเงิน</button></div><p class="muted">* ตัวอย่างเว็บไซต์เพื่อการศึกษา ยังไม่ได้เชื่อมต่อระบบชำระเงินจริง</p></section><script>document.getElementById('cartQty').value=localStorage.getItem('foodQty')||1;function updateTotal(){let t=Math.max(1,+document.getElementById('cartQty').value||1)*60;document.getElementById('total').textContent=t+' บาท';document.getElementById('grand').textContent=t+' บาท'}updateTotal()</script>
+
+<footer>♡ ครัวไทยบ้านเรา | อร่อย สะอาด บริการด้วยใจ ♡</footer>
+</body>
+</html>

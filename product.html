@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>รายละเอียดเมนู | ครัวไทยบ้านเรา</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="top"><a class="brand" href="index.html"><span class="logo">🍲</span><span><b>ครัวไทยบ้านเรา</b><small>อาหารไทย รสชาติบ้าน ๆ</small></span></a><nav><a href="index.html">หน้าแรก</a><a href="menu.html">เมนูอาหาร</a><a class="active" href="product.html">รายละเอียดเมนู</a><a href="cart.html">ตะกร้าสินค้า</a><a href="about.html">เกี่ยวกับเรา</a></nav><a class="cart" href="cart.html">♡ 🛒</a></header>
+<section class="product-detail"><div class="product-visual">🍜<small>เมนูขายดีของร้าน</small></div><div class="product-copy"><span class="tag">เมนูแนะนำ</span><h1>ผัดไทยกุ้งสด</h1><div class="stars">★★★★★ <small>(4.8) รีวิวจากลูกค้า</small></div><h2>60 บาท</h2><p>ผัดไทยเส้นเหนียวนุ่ม คลุกเคล้าซอสสูตรพิเศษ หอมกลิ่นกระทะ เสิร์ฟพร้อมกุ้งสด ถั่วงอก และมะนาวสด</p><label for="qty">จำนวน</label><div class="quantity"><button onclick="changeQty(-1)">−</button><input id="qty" value="1" type="number" min="1"><button onclick="changeQty(1)">+</button></div><a class="btn" href="cart.html" onclick="localStorage.setItem('foodQty',document.getElementById('qty').value)">🛒 เพิ่มลงตะกร้า</a><p class="muted">♡ วัตถุดิบสดใหม่ ปรุงจานต่อจาน</p></div></section>
+<script>function changeQty(n){const q=document.getElementById('qty');q.value=Math.max(1,(+q.value||1)+n)}</script>
+
+<footer>♡ ครัวไทยบ้านเรา | อร่อย สะอาด บริการด้วยใจ ♡</footer>
+</body>
+</html>
